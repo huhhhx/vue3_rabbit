@@ -1,4 +1,7 @@
 // 重置样式
+// 元素的宽度和高度会包括内容区域、内边距和边框的宽度，
+//不会额外增加到元素的宽度和高度之外。这意味着元素的总宽度和高度会更加可控，
+//不会受到边框和内边距的影响，更容易进行布局控制。
 * {
   box-sizing: border-box;
 }
@@ -65,6 +68,7 @@ ul {
   width: 1240px;
   margin: 0 auto;
   position: relative;
+  // background-color: pink;
 }
 .ellipsis {
   white-space: nowrap;
@@ -101,4 +105,11 @@ ul {
 // reset element
 .el-breadcrumb__inner.is-link {
   font-weight: 400 !important;
+}
+/* 版心 整个页面的内容宽度都是1240px */
+.wrapper {
+  width: 1240px;
+  /* 水平居中一个块级元素 */
+  margin: 0 auto;
+  // background-color: antiquewhite;
 }
