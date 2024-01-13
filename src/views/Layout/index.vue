@@ -1,5 +1,18 @@
+<script setup>
+import { ref, reactive, onMounted } from 'vue';
+import LayoutNav from './components/LayoutNav.vue';
+import LayoutHeader from './components/LayoutHeader.vue';
+import LayoutFooter from './components/LayoutFooter.vue';
+import LayoutFixed from './components/LayoutFixed.vue';
+import { useCategoryStore } from '@/stores/categoryStore';
+
+const categoryStore = useCategoryStore();
+onMounted(() => categoryStore.getCategory());
+</script>
+
 <template>
   <div class="main">
+    <LayoutFixed />
     <LayoutNav />
     <LayoutHeader />
     <!--二级路由出口 -->
@@ -7,12 +20,7 @@
     <LayoutFooter />
   </div>
 </template>
-<script setup>
-import { ref, reactive } from 'vue';
-import LayoutNav from './components/LayoutNav.vue';
-import LayoutHeader from './components/LayoutHeader.vue';
-import LayoutFooter from './components/LayoutFooter.vue';
-</script>
+
 <style lang="less" scoped>
 .main {
   height: 100%;
@@ -20,5 +28,6 @@ import LayoutFooter from './components/LayoutFooter.vue';
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
 }
 </style>

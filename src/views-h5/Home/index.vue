@@ -8,10 +8,10 @@ import HomeProduct from './components/HomeProduct.vue';
 </script>
 <template>
   <div class="container">
-    <!-- <HomeBanner /> -->
-    <!-- <HomeNew /> -->
+    <HomeBanner />
+    <HomeNew />
   </div>
-  <!-- <HomeProduct /> -->
+  <HomeProduct />
 </template>
 
 <style lang="less" scoped></style>

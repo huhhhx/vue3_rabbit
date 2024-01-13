@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive } from 'vue';
 </script>
-<template>div</template>
+<template></template>
 
 <style lang="less" scoped></style>
